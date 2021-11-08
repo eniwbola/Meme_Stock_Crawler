@@ -23,9 +23,9 @@ symbol_loc=0;
 nasdaq_stock_file="nasdaqtraded.txt";
 symbol_loc=1;
 
-my_user_agent="Bola_Stock_Script"
-my_client_id='TDI0lzRiSdmK6w';
-my_client_secret='4u-XvE0xGuzwT8r1letQ8aqrIqQg-w';
+my_user_agent=#you will get these by creating reddit instance https://towardsdatascience.com/how-to-use-the-reddit-api-in-python-5e05ddfd1e5c 
+my_client_id=#;
+my_client_secret=#;
 
 def parse_stock_txt_file(stock_file,symbol_loc): # parse nasdaqtradded.txt files to get a list of stock ticker names
     full_stock_list = []
@@ -41,7 +41,7 @@ def parse_stock_txt_file(stock_file,symbol_loc): # parse nasdaqtradded.txt files
 all_stock_names=parse_stock_txt_file(nasdaq_stock_file,symbol_loc)
 
     
-#r = praw.Reddit(client_id='TDI0lzRiSdmK6w', client_secret='4u-XvE0xGuzwT8r1letQ8aqrIqQg-w', user_agent='Bola_Stock_Script')
+
 r = praw.Reddit(client_id=my_client_id, client_secret=my_client_secret, user_agent=my_user_agent)
 api = PushshiftAPI(r) #create reddit api instance
 
